@@ -1,0 +1,10 @@
+{
+  "name": "flash-card",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lucas Emanuel",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
