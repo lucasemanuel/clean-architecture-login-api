@@ -12,8 +12,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "test": "jest --watchAll",
-    "test:staged": "jest"
+    "test": "jest --watchAll --silent",
+    "test:staged": "jest --silent"
   },
   "standard": {
     "env": ["jest"]
