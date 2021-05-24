@@ -5,15 +5,19 @@ module.exports = class AuthUseCase {
     this.loadUserByEmailRepository = loadUserByEmailRepository
   }
 
-  async auth (email, password) {
-    if (!email) throw new MissingParamError('email')
-    if (!password) throw new MissingParamError('password')
+  loadUserByEmailRepositoryIsValid () {
     if (!this.loadUserByEmailRepository) {
       throw new MissingParamError('loadUserByEmailRepository')
     }
     if (!this.loadUserByEmailRepository.load) {
       throw new InvalidParamError('loadUserByEmailRepository')
     }
+  }
+
+  async auth (email, password) {
+    if (!email) throw new MissingParamError('email')
+    if (!password) throw new MissingParamError('password')
+    this.loadUserByEmailRepositoryIsValid()
 
     const user = await this.loadUserByEmailRepository.load(email)
     if (!user) return null
