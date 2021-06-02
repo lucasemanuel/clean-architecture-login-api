@@ -1,4 +1,4 @@
-const MissingParamError = require('./errors/missing-param-error')
+const MissingParamError = require('../errors/missing-param-error')
 const bcrypt = require('bcrypt')
 
 module.exports = class Encrypter {
