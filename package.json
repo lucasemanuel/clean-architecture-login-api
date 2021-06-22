@@ -1,7 +1,7 @@
 {
   "name": "clean-architecture",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "author": "Lucas Emanuel",
   "license": "MIT",
   "devDependencies": {
@@ -12,9 +12,10 @@
     "standard": "^16.0.3"
   },
   "scripts": {
+    "start": "node src/main/index.js",
     "prepare": "husky install",
     "test": "jest --watchAll --silent",
-    "test:staged": "jest --silent"
+    "test:staged": "jest --noStackTrace --passWithNoTests --runInBand --findRelatedTests --silent"
   },
   "standard": {
     "env": [
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.9",
     "validator": "^13.6.0"
