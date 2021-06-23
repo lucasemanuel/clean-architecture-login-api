@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node src/main/index.js",
     "prepare": "husky install",
-    "test": "jest --watchAll --silent",
+    "test": "jest --watchAll --silent --runInBand",
     "test:staged": "jest --noStackTrace --passWithNoTests --runInBand --findRelatedTests --silent",
     "test:integration": "jest -c jest-integration-config.js"
   },
